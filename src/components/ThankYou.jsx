@@ -38,7 +38,7 @@ export default function ThankYou({ packageId, onReset }) {
             ''
           )}
           . We'll review your restaurant and reach out on WhatsApp or email
-          within one business day.
+          within a few hours.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">

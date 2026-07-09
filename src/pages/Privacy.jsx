@@ -37,7 +37,7 @@ const SECTIONS = [
   {
     heading: 'Contact',
     body: [
-      `Questions about this policy? Reach us at ${CONTACT_EMAIL} and we will respond within one business day.`,
+      `Questions about this policy? Reach us at ${CONTACT_EMAIL} and we will respond within a few hours.`,
     ],
   },
 ]

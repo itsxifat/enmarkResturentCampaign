@@ -25,7 +25,7 @@ const CHANNELS = [
   {
     icon: Clock,
     label: 'Response time',
-    value: 'Within one business day',
+    value: 'Within a few hours',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function Contact() {
         </h2>
         <p className="text-sm text-brand-muted mt-2 mb-5">
           The fastest way to start is the application form — tell us about your
-          restaurant and we'll come back within one business day.
+          restaurant and we'll come back within a few hours.
         </p>
         <Link
           to="/#apply"

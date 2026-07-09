@@ -10,7 +10,7 @@ import { CONTACT_EMAIL } from '../lib/contact'
 const EMPTY = { name: '', restaurant: '', email: '', phone: '', city: '', notes: '' }
 
 const REASSURANCE = [
-  'We reply within one business day',
+  'We reply within a few hours',
   'No obligation — just a conversation',
   'Free content production with every plan',
 ]
@@ -142,7 +142,7 @@ export default function ApplicationForm({
               Tell us about your restaurant
             </h2>
             <p className="text-sm text-brand-muted">
-              Two minutes. We reply within one business day.
+              Two minutes. We reply within a few hours.
             </p>
 
             <ul className="mt-6 space-y-3">
