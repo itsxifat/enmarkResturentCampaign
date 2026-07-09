@@ -4,7 +4,7 @@ import Button from './ui/Button'
 
 export default function Nav({ onApply }) {
   return (
-    <header className="sticky top-0 z-40 bg-brand-ink">
+    <header className="sticky top-0 z-40 bg-black">
       <nav className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
         <Logo />
         <Button variant="primary" onClick={onApply}>
