@@ -66,16 +66,16 @@ export const COMPARISON = [
 ]
 
 export const EVERY_PACKAGE_INCLUDES = [
-  'restaurant marketing strategy',
-  'monthly content calendar',
-  'professional caption copywriting',
-  'hashtag research',
-  'content scheduling',
-  'professional editing & color grading',
-  'trend research',
-  'competitor monitoring',
-  'monthly performance review',
-  'dedicated client communication',
+  'Restaurant marketing strategy',
+  'Monthly content calendar',
+  'Professional caption copywriting',
+  'Hashtag research',
+  'Content scheduling',
+  'Professional editing & color grading',
+  'Trend research',
+  'Competitor monitoring',
+  'Monthly performance review',
+  'Dedicated client communication',
 ]
 
 export const TERMS = [

@@ -1,72 +1,33 @@
-import { useState } from 'react'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import ValueProp from './components/ValueProp'
-import TrustStrip from './components/TrustStrip'
-import HowItWorks from './components/HowItWorks'
-import EligibilityChecklist from './components/EligibilityChecklist'
-import PackageGrid from './components/PackageGrid'
-import Quiz from './components/Quiz'
-import RecommendationResult from './components/RecommendationResult'
-import ApplicationForm from './components/ApplicationForm'
-import ThankYou from './components/ThankYou'
-import Footer from './components/Footer'
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
+import WhatsAppButton from './components/WhatsAppButton'
 
-const scrollTo = (id) =>
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+// Reset scroll to the top on navigation, unless the target has a hash anchor.
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (!hash) window.scrollTo(0, 0)
+  }, [pathname, hash])
+  return null
+}
 
 export default function App() {
-  const [recommendation, setRecommendation] = useState(null)
-  const [selectedPackage, setSelectedPackage] = useState(null)
-  const [submitted, setSubmitted] = useState(false)
-
-  // Selecting a package (from the grid or the quiz result) drops the user
-  // into the application form with that package pre-filled.
-  const handleSelect = (id) => {
-    setSelectedPackage(id)
-    setSubmitted(false)
-    requestAnimationFrame(() => scrollTo('apply'))
-  }
-
-  const handleSubmit = () => {
-    setSubmitted(true)
-    requestAnimationFrame(() => scrollTo('apply'))
-  }
-
-  const handleReset = () => {
-    setSubmitted(false)
-    scrollTo('top')
-  }
-
   return (
-    <div className="min-h-screen bg-white font-sans text-brand-ink antialiased">
-      <Nav onApply={() => scrollTo('packages')} />
-      <Hero
-        onPrimary={() => scrollTo('packages')}
-        onSecondary={() => scrollTo('quiz')}
-      />
-      <ValueProp />
-      <TrustStrip />
-      <HowItWorks />
-      <EligibilityChecklist />
-      <PackageGrid selectedPackage={selectedPackage} onSelect={handleSelect} />
-      <Quiz onComplete={setRecommendation} />
-      {recommendation && (
-        <RecommendationResult
-          recommendationId={recommendation}
-          onApply={handleSelect}
-        />
-      )}
-      {submitted ? (
-        <ThankYou packageId={selectedPackage} onReset={handleReset} />
-      ) : (
-        <ApplicationForm
-          selectedPackage={selectedPackage}
-          onSelectPackage={setSelectedPackage}
-          onSubmit={handleSubmit}
-        />
-      )}
-      <Footer onApply={() => scrollTo('packages')} />
-    </div>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+      </Routes>
+      <WhatsAppButton />
+    </>
   )
 }

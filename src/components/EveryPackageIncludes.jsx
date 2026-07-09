@@ -5,10 +5,10 @@ export default function EveryPackageIncludes() {
   return (
     <div className="max-w-4xl mx-auto mt-14 bg-brand-cream rounded-card border border-brand-border p-6 md:p-8">
       <h3 className="font-display text-lg font-medium text-brand-ink">
-        every package includes
+        Every package includes
       </h3>
       <p className="text-xs text-brand-muted mt-1 mb-5">
-        no matter which plan you choose.
+        No matter which plan you choose.
       </p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5">
         {EVERY_PACKAGE_INCLUDES.map((item) => (

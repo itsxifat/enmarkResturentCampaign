@@ -21,10 +21,10 @@ export default function RecommendationResult({ recommendationId, onApply }) {
         <div className="text-center">
           <SectionBanner icon={Star}>your match</SectionBanner>
           <h2 className="font-display text-2xl md:text-3xl font-medium text-brand-ink tracking-tight mt-3 mb-2">
-            we'd start you on {recommended.name.toLowerCase()}
+            We'd start you on {recommended.name}
           </h2>
           <p className="text-sm text-brand-muted mb-8 md:mb-10">
-            based on your answers, this gives you the most room to grow without
+            Based on your answers, this gives you the most room to grow without
             overpaying.
           </p>
         </div>
@@ -70,7 +70,10 @@ export default function RecommendationResult({ recommendationId, onApply }) {
               {recommended.price}
             </span>
             <span className="text-xs text-brand-muted">
-              {recommended.period} · 6-month minimum
+              {recommended.period} ·{' '}
+              <span className="font-semibold text-brand-green-dark">
+                6-month minimum
+              </span>
             </span>
           </div>
 
@@ -79,21 +82,23 @@ export default function RecommendationResult({ recommendationId, onApply }) {
             onClick={() => onApply(recommended.id)}
             className="w-full justify-center mt-4"
           >
-            apply with {recommended.name}
+            Apply with {recommended.name}
             <ArrowRight size={14} strokeWidth={2} />
           </Button>
         </div>
 
         <p className="text-center text-xs text-brand-muted mt-10 mb-4">
-          or consider
+          Or consider
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
           {others.map((p) => {
             const Icon = ICONS[p.icon]
             return (
-              <div
+              <button
                 key={p.id}
-                className="bg-white border border-brand-border rounded-card p-5 hover:border-brand-ink/30 transition-colors duration-150"
+                type="button"
+                onClick={() => onApply(p.id)}
+                className="group text-left w-full bg-white border border-brand-border rounded-card p-5 hover:border-brand-ink/30 transition-colors duration-150"
               >
                 <div className="flex items-center gap-2">
                   <span className="w-8 h-8 rounded-xl bg-brand-green-soft flex items-center justify-center flex-shrink-0">
@@ -111,15 +116,11 @@ export default function RecommendationResult({ recommendationId, onApply }) {
                   </span>
                 </div>
                 <p className="text-xs text-brand-muted mt-2">{p.bestFor}</p>
-                <button
-                  type="button"
-                  onClick={() => onApply(p.id)}
-                  className="text-xs font-medium text-brand-green-dark inline-flex items-center gap-1 mt-3 hover:gap-2 transition-all"
-                >
-                  apply with {p.name}
+                <span className="text-xs font-medium text-brand-green-dark inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                  Apply with {p.name}
                   <ArrowRight size={12} strokeWidth={2} />
-                </button>
-              </div>
+                </span>
+              </button>
             )
           })}
         </div>

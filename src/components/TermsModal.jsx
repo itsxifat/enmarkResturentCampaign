@@ -15,7 +15,7 @@ export default function TermsModal({ open, onClose }) {
       <div className="relative bg-white rounded-card border border-brand-border max-w-lg w-full max-h-[80vh] overflow-y-auto p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-display text-lg font-medium text-brand-ink">
-            terms &amp; conditions
+            Terms &amp; conditions
           </h3>
           <button
             type="button"
@@ -38,7 +38,7 @@ export default function TermsModal({ open, onClose }) {
 
         <div className="mt-6 flex justify-end">
           <Button variant="dark" onClick={onClose}>
-            got it
+            Got it
           </Button>
         </div>
       </div>

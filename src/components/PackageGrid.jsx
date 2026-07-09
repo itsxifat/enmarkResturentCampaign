@@ -14,15 +14,15 @@ export default function PackageGrid({ selectedPackage, onSelect }) {
         <div className="text-center">
           <SectionBanner icon={PackageIcon}>packages</SectionBanner>
           <h2 className="font-display text-2xl md:text-3xl font-medium text-brand-ink tracking-tight mt-3 mb-2">
-            pick the plan that fits your kitchen
+            Pick the plan that fits your kitchen
           </h2>
           <p className="text-sm text-brand-muted mb-8 md:mb-10">
-            flat monthly pricing in bdt — and every plan includes free content
+            Flat monthly pricing in BDT — and every plan includes free content
             production.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           {PACKAGES.map((pkg) => {
             const Icon = ICONS[pkg.icon]
             const isSelected = selectedPackage === pkg.id
@@ -31,17 +31,17 @@ export default function PackageGrid({ selectedPackage, onSelect }) {
                 key={pkg.id}
                 className={`relative flex flex-col bg-white border rounded-card p-6 transition-colors duration-150 ${
                   pkg.featured
-                    ? 'border-brand-ink'
+                    ? 'border-brand-green ring-1 ring-brand-green shadow-lg shadow-brand-green/10'
                     : 'border-brand-border hover:border-brand-ink/30'
                 } ${isSelected ? 'ring-2 ring-brand-green' : ''}`}
               >
                 {pkg.featured && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-green text-brand-ink text-[10px] font-medium px-3 py-1 rounded-pill whitespace-nowrap">
-                    most popular
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-green text-brand-ink text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-pill whitespace-nowrap">
+                    Most popular
                   </div>
                 )}
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <span className="w-9 h-9 rounded-xl bg-brand-green-soft flex items-center justify-center flex-shrink-0">
                     <Icon
                       size={20}
@@ -61,7 +61,7 @@ export default function PackageGrid({ selectedPackage, onSelect }) {
 
                 <div className="flex items-center gap-1.5 bg-brand-green-soft text-brand-green-dark text-[11px] font-medium rounded-lg px-2.5 py-1.5 mt-3">
                   <Gift size={12} strokeWidth={1.5} className="flex-shrink-0" />
-                  content production included free
+                  Content production included free
                 </div>
 
                 <ul className="flex-1 space-y-2.5 mt-5">
@@ -90,14 +90,17 @@ export default function PackageGrid({ selectedPackage, onSelect }) {
                     </span>
                   </div>
                   <p className="text-[11px] text-brand-muted/70 mt-1">
-                    6-month minimum · billed monthly in advance
+                    <span className="font-semibold text-brand-green-dark">
+                      6-month minimum
+                    </span>{' '}
+                    · billed monthly in advance
                   </p>
                   <Button
                     variant={pkg.featured ? 'primary' : 'outline'}
                     onClick={() => onSelect(pkg.id)}
                     className="w-full justify-center mt-4"
                   >
-                    {isSelected ? 'selected' : `choose ${pkg.name.toLowerCase()}`}
+                    {isSelected ? 'Selected' : `Choose ${pkg.name}`}
                   </Button>
                 </div>
               </div>
@@ -109,7 +112,10 @@ export default function PackageGrid({ selectedPackage, onSelect }) {
         <EveryPackageIncludes />
 
         <p className="text-center text-xs text-brand-muted mt-8">
-          6-month minimum · payments in advance · ad spend billed separately
+          <span className="font-semibold text-brand-green-dark">
+            6-month minimum
+          </span>{' '}
+          · payments in advance · ad spend billed separately
         </p>
       </div>
     </section>

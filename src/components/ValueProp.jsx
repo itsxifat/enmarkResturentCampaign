@@ -2,17 +2,17 @@ import { Gift, Megaphone, Camera, Check } from 'lucide-react'
 import SectionBanner from './SectionBanner'
 
 const MARKETING = [
-  'managed social — facebook, instagram & tiktok',
-  'meta ads & remarketing',
-  'pr & influencer campaigns',
-  'strategy, audits & monthly reporting',
+  'Managed social — Facebook, Instagram & TikTok',
+  'Meta ads & remarketing',
+  'PR & influencer campaigns',
+  'Strategy, audits & monthly reporting',
 ]
 
 const PRODUCTION = [
-  'food & menu photography',
-  'reels & short-form video',
-  'on-site production shoots',
-  'professional editing & color grading',
+  'Food & menu photography',
+  'Reels & short-form video',
+  'On-site production shoots',
+  'Professional editing & color grading',
 ]
 
 export default function ValueProp() {
@@ -22,11 +22,11 @@ export default function ValueProp() {
         <div className="text-center">
           <SectionBanner icon={Gift}>how the deal works</SectionBanner>
           <h2 className="font-display text-2xl md:text-3xl font-medium text-brand-ink tracking-tight mt-3 mb-2">
-            you pay for the marketing. the production is on us.
+            You pay for the marketing. The production is on us.
           </h2>
           <p className="text-sm text-brand-muted mb-8 md:mb-10 max-w-xl mx-auto">
-            professional food shoots and video normally cost a fortune on their
-            own. with enmark they're built into your monthly plan — so you get
+            Professional food shoots and video normally cost a fortune on their
+            own. With enmark they're built into your monthly plan — so you get
             the content for free and only pay for the marketing.
           </p>
         </div>
@@ -43,9 +43,9 @@ export default function ValueProp() {
                 />
               </span>
               <div>
-                <p className="text-xs text-brand-muted">you invest in</p>
+                <p className="text-xs text-brand-muted">You invest in</p>
                 <h3 className="font-display text-lg font-medium text-brand-ink">
-                  the marketing
+                  The marketing
                 </h3>
               </div>
             </div>
@@ -65,14 +65,14 @@ export default function ValueProp() {
               ))}
             </ul>
             <p className="text-xs text-brand-muted mt-5 pt-4 border-t border-brand-border">
-              one flat monthly fee, from BDT 20,000
+              One flat monthly fee, from BDT 20,000
             </p>
           </div>
 
           {/* What's free */}
           <div className="relative bg-brand-green-soft border border-brand-green rounded-card p-6">
             <span className="absolute top-5 right-5 bg-brand-ink text-brand-green text-[10px] font-medium px-2.5 py-1 rounded-pill">
-              free
+              Free
             </span>
             <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-xl bg-white flex items-center justify-center flex-shrink-0">
@@ -84,10 +84,10 @@ export default function ValueProp() {
               </span>
               <div>
                 <p className="text-xs text-brand-green-dark">
-                  you get, included
+                  You get, included
                 </p>
                 <h3 className="font-display text-lg font-medium text-brand-ink">
-                  the production
+                  The production
                 </h3>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function ValueProp() {
               ))}
             </ul>
             <p className="text-xs text-brand-green-dark mt-5 pt-4 border-t border-brand-green/40">
-              included with every plan — BDT 0 extra
+              Included with every plan — BDT 0 extra
             </p>
           </div>
         </div>

@@ -24,10 +24,10 @@ export default function ThankYou({ packageId, onReset }) {
         </div>
 
         <h2 className="font-display text-2xl md:text-3xl font-medium tracking-tight mt-6">
-          application received
+          Application received
         </h2>
         <p className="text-sm text-white/60 mt-3 max-w-sm mx-auto">
-          thanks
+          Thanks
           {packageId ? (
             <>
               {' '}
@@ -37,13 +37,13 @@ export default function ThankYou({ packageId, onReset }) {
           ) : (
             ''
           )}
-          . we'll review your restaurant and reach out on whatsapp or email
+          . We'll review your restaurant and reach out on WhatsApp or email
           within one business day.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
           <Button variant="primary" onClick={onReset}>
-            back to top
+            Back to top
           </Button>
         </div>
       </div>
