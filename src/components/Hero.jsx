@@ -18,7 +18,7 @@ export default function Hero({ onPrimary, onSecondary }) {
   return (
     <section
       id="top"
-      className="relative bg-brand-ink text-white overflow-hidden"
+      className="relative bg-black text-white overflow-hidden"
     >
       {/* Brand mark — bleeds off the bottom-right corner as a design accent */}
       <img

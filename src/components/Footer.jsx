@@ -19,7 +19,7 @@ const SOCIAL = [
 
 export default function Footer({ onApply }) {
   return (
-    <footer className="bg-brand-ink text-white/70">
+    <footer className="bg-black text-white/70">
       <div className="max-w-6xl mx-auto px-4 py-14">
         {/* Closing call to action */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 pb-10 border-b border-white/10">

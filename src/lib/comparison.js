@@ -80,11 +80,13 @@ export const EVERY_PACKAGE_INCLUDES = [
 
 export const TERMS = [
   'Minimum contract duration is 6 months.',
+  'During an active contract, the plan and its duration cannot be downgraded. You may upgrade to a higher plan or extend the duration at any time; switching to a lower plan or a shorter term is only possible once the current contract ends and a new contract begins.',
   'Monthly payments must be made in advance.',
   'Advertising budgets are not included.',
   'Influencer remuneration, model fees, location charges, food styling props, premium equipment and third-party service charges are billed separately.',
   'Additional production days or deliverables beyond the package scope will incur additional charges.',
   'One revision is included for each design and video deliverable.',
+  'Approved content is delivered gradually according to your content calendar — edited photos, videos, and posts are released on their scheduled dates, not handed over all at once.',
   'Content approvals should be provided within 48 hours.',
   'Raw footage and editable source files are not included unless separately agreed.',
 ]
